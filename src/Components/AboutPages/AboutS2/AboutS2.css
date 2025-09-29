@@ -1,0 +1,193 @@
+.aboutS2-container {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Fill horizontally */
+}
+
+.aboutS2-head {
+  background-color: white;
+  min-height: 300px;
+  height: 80vh;
+  margin: 0%;
+  width: 100%; /* Responsive width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heading styling */
+.aboutS2-head h4 {
+  color: #000000;
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 0%;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* Paragraph styling */
+.aboutS2-head p {
+  color: rgb(0, 0, 0);
+ font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 3%;
+  /* font-weight: 100; */
+}
+
+.aboutS3-features-row {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 48px);
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: hidden; 
+  overflow-y: hidden;/* allow scroll on very small screens if needed */
+  padding: 2%;
+}
+
+.aboutS3-card {
+  flex: 1 1 0;
+  max-width: 200px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 18px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 130px;
+  padding: 28px 10px 18px 10px;
+  transition: transform 0.23s, box-shadow 0.23s;
+  box-sizing: border-box;
+  scroll-snap-align: start; /* improves horizontal scroll snapping */
+}
+
+.aboutS3-card:hover {
+  transform: translateY(-10px) scale(1.06);
+}
+
+.aboutS3-icon {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  aspect-ratio: 1 / 1; /* maintain square ratio */
+  display: block;
+  margin-bottom: 18px;
+  object-fit: contain;
+  color: white;
+  flex-shrink: 0;
+}
+
+.aboutS3-label {
+  color: #000000;
+  font-size: clamp(0.75rem, 1vw, 1.06rem);
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Tablet and small desktop */
+@media (max-width: 900px) {
+  .aboutS2-head h4 {
+    font-size: 2.6rem;
+    padding-top: 0%;
+  }
+  .aboutS2-head p {
+    font-size: 1.18rem;
+    width: 88%;
+    padding-top: 2.5%;
+  }
+  .aboutS2-head {
+    height: 44vh;
+    min-height: 220px;
+    margin: 3% 0;
+  }
+    .aboutS3-container {
+    min-height: 60vh;
+    height: 0;
+  }
+  .aboutS3-features-row {
+    gap: 24px;
+  }
+  .aboutS3-card {
+    max-width: 145px;
+    min-height: 135px;
+    padding: 18px 5px 12px 5px;
+  }
+
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .aboutS2-head {
+    height: auto;
+    min-height: 160px;
+    margin: 2% 0;
+    padding-bottom: 10vw;
+  }
+  .aboutS2-head h4 {
+    font-size: 1.5rem;
+    padding-top: 10%;
+  }
+  .aboutS2-head p {
+    font-size: 0.95rem;
+    width: 96%;
+    padding-top: 6%;
+    padding-left: 2%;
+  }
+    .aboutS3-title {
+    font-size: 2rem;
+  }
+  .aboutS3-features-row {
+    gap: 14px;
+  }
+  .aboutS3-card {
+    max-width: 90px;
+    min-height: 120px;
+    padding: 8px 2px 8px 2px;
+  }
+  .aboutS3-icon {
+    max-width: 62px;
+    margin-bottom: 9px;
+  }
+  .aboutS3-label {
+    font-size: 0.78rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .aboutS2-head h4 {
+    font-size: 1.15rem;
+    padding-top: 10%;
+  }
+  .aboutS2-head p {
+    font-size: 0.8rem;
+    width: 99%;
+    padding-top: 6%;
+    padding-left: 1%;
+  }
+  .aboutS3-features-row {
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 8% 1%;
+  }
+  .aboutS3-card {
+    max-width: 40vw;
+    min-width: 80px;
+  }
+
+}

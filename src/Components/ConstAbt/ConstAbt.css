@@ -1,0 +1,147 @@
+/* Section */
+.const-abt {
+  color: #fff;
+  padding: 40px 20px;   /* balanced padding */
+  width: 100%;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+/* Container */
+.abt-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  margin: 0;
+  max-width: 1200px;   /* limit content width on large screens */
+  margin-inline: auto; /* center inside section */
+  flex-wrap: nowrap;
+}
+
+/* Left Side - Image */
+.abt-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.abt-image img {
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Right Side - Content */
+.abt-content {
+  flex: 1;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.abt-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+.abt-content p {
+  width: 90%;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ddd;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+/* Services */
+.abt-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.service-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.service-icon {
+  font-size: 18px;
+  color: #bed757;
+}
+
+/* Button */
+.abt-btn {
+  background: #28a6e0;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.abt-btn:hover {
+  background: #bed757;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .abt-container {
+    gap: 40px;
+  }
+  .abt-content h2 {
+    font-size: 32px;
+  }
+  .abt-content p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .abt-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .abt-image img {
+    max-width: 320px;
+    padding: 0;
+  }
+  .abt-content {
+    text-align: center;
+    padding: 0 10px;
+  }
+  .abt-services {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .abt-services {
+    grid-template-columns: 1fr;
+  }
+  .abt-content h2 {
+    font-size: 24px;
+  }
+  .abt-content p {
+    font-size: 14px;
+  }
+  .abt-image img {
+    max-width: 260px;
+  }
+}

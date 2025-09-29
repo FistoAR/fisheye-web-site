@@ -1,0 +1,43 @@
+/* Base styles (desktop and up) */
+.scroll-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1000;
+  background: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  padding: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 24px;
+  transition: opacity 0.3s;
+  opacity: 0.85;
+}
+
+.scroll-to-top:hover {
+  opacity: 1;
+  background: #3d0404;
+}
+
+/* Tablet (between 480px and 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .scroll-to-top {
+    right: 20px;
+    bottom: 20px;
+    padding: 14px;
+    font-size: 20px;
+  }
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .scroll-to-top {
+    right: 15px;
+    bottom: 15px;
+    padding: 12px;
+    font-size: 18px;
+  }
+}

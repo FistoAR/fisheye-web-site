@@ -1,0 +1,75 @@
+.gallery-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 130px 20px;
+  background-image: url(../Asset/About-BG.webp);
+}
+
+.gallery-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 36px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+.gallery-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Reveal Animation */
+.gallery-section-img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  transform-origin: 90% 90%;
+  clip-path: circle(2.5rem at 82% 82%);
+  filter: brightness(1.3);
+  scale: 1.5;
+}
+
+.gallery-section-info {
+  padding: 16px 12px;
+  text-align: center;
+}
+
+/* Title Animation */
+.split-text .char {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  translate: 4rem 0;
+  opacity: 0;
+  display: inline-block;
+}
+
+.gallery-section-info p {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: #000000;
+  opacity: 0;
+  /* font-weight: 100; GSAP will fade this in */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .gallery-main-container {
+    padding-top: 200px;
+  }
+  .gallery-section-img {
+    height: 140px;
+  }
+}

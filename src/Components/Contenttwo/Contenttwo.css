@@ -1,0 +1,263 @@
+.content-two-bg{
+  background-color: #000000;
+  width: 100%;
+  height: 120%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+.contenttwo-bg {
+  background: url('./Asset/what_we_do_background.webp') center/cover no-repeat;
+  padding: 80px 0;
+  border-radius: 50px;
+  margin: 2%;
+}
+
+.contenttwo-wrapper {
+  max-width: 1200px;
+  margin: 0;
+  padding: 0 30px;
+}
+
+.contenttwo-title {
+  font-size: 2.6rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contenttwo-desc {
+  color: #ffffff;
+  margin: 12px 0 40px 0;
+  font-size: 1.2rem;
+   font-weight: 200;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contenttwo-card-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.contenttwo-card {
+  background: rgba(255,255,255,0.10);
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  width: 330px;
+  min-height: 340px;
+  transition: box-shadow 0.3s;
+}
+
+.Lborder{
+  position: relative;
+  bottom: 80%;
+  left: 5%;
+  font-size: 80px;
+  text-size-adjust: 0;
+}
+
+.Rborder{
+  position: relative;
+  bottom: 42%;
+  left: 75%;
+  font-size: 80px;
+  text-size-adjust: 0;
+}
+
+.RborderH{
+  position: relative;
+  bottom: 2%;
+  left: 45%;
+  font-size: 80px;
+  text-size-adjust: 0;
+}
+
+.LborderH{
+  position: relative;
+  bottom:-2%;
+  left: -45%;
+  font-size: 80px;
+  text-size-adjust: 0;
+}
+
+.card-img {
+  width: 100%;
+  height: 86%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-bottom-bar {
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+  background: #ffffff;
+  border-radius: 0 0 22px 22px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  box-sizing: border-box;
+  font-size: 1.12rem;
+}
+
+.card-bottom-icon {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
+.card-bottom-title {
+  font-weight: 500;
+  color: #000000;
+  font-size: 1.5rem;
+ font-family: 'Poppins', sans-serif;
+
+}
+
+/* Hover overlay */
+.card-hover-content {
+  position: absolute;
+  inset: 0;
+  background: rgb(255, 255, 255);
+  color: #fcfcfc;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(40%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s, transform 0.4s;
+  padding: 28px;
+  text-align: center;
+}
+.contenttwo-card:hover .card-hover-content {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.card-hover-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #000000;
+}
+
+.card-hover-title {
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  color: #000000;
+   text-transform: lowercase;
+}
+
+.card-hover-title::first-letter {
+  text-transform: uppercase;
+}
+
+.card-hover-desc {
+  font-size: 1rem;
+  color: #000000;
+  opacity: 0.96;
+font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+@media (min-width: 1600px) {
+  .contenttwo-wrapper {
+  max-width: 1200px;
+  margin: 0;
+  padding: 0 90px;
+}
+ .contenttwo-card-row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    padding-left: 0px;
+  }
+
+
+
+}
+
+/* @media (min-width: 1600px) {
+   .contenttwo-card-row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 90px;
+    padding-left: 100px;
+  }
+} */
+@media (max-width: 1300px) {
+  .contenttwo-card-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .contenttwo-card-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Medium screens (900px and below) - 2 columns */
+@media (max-width: 900px) {
+  .contenttwo-card-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contenttwo-wrapper {
+    padding: 0 20px;
+  }
+}
+
+/* Small screens (600px and below) - 1 column, full width cards */
+@media (max-width: 600px) {
+  .contenttwo-card-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .contenttwo-wrapper {
+    padding: 0 10px;
+  }
+  .contenttwo-card {
+    width: 100%;
+    min-height: auto;
+  }
+  .card-img {
+    height: auto;
+  }
+}
+
+/* Make sure text and titles scale nicely */
+.contenttwo-title {
+  font-size: 2.6rem;
+}
+
+@media (max-width: 900px) {
+  .contenttwo-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenttwo-title {
+    font-size: 1.6rem;
+  }
+}
+
+.contenttwo-desc {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .contenttwo-desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenttwo-desc {
+    font-size: 0.9rem;
+  }
+}

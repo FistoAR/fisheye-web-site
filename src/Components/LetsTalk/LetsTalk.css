@@ -1,0 +1,159 @@
+.Letstalk-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 4rem 2rem;
+  margin-top: 2%;
+  gap: 2rem;
+  background: white;
+  
+}
+
+.talk-title {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.talk-title h4 {
+  font-size: 3.2rem;
+  color: black;
+   font-family: 'Poppins', sans-serif;
+  
+}
+
+.talk-title p {
+  font-size: 1.2rem;
+  padding-top: 4%;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  max-width: 460px;
+  line-height: 1.5;
+  /* font-weight: 100; */
+}
+
+.Lets-button {
+  margin-top: 2rem;
+  justify-self: start;
+  position: relative;
+  left: 40%;
+  top: 10%;
+}
+
+.lets-btn {
+  position: relative;
+  height: 54px;
+  width: 140px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  overflow: hidden;
+  border: 3px solid black;  /* base */
+  background: 
+    linear-gradient(135deg, #232526, #414345) padding-box,
+    linear-gradient(120deg, #ff35b4, #4033ff) border-box; /* 👈 gradient border */
+  color: #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition:
+    background 0.3s cubic-bezier(.25, .8, .25, 1),
+    transform 0.2s,
+    box-shadow 0.3s;
+}
+
+
+/* Liquid effect */
+.liquid {
+  background: linear-gradient(#000000 0 0) no-repeat
+    calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+  transition:
+    0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.liquid:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 40px rgba(64, 51, 255, 0.25);
+}
+
+.lets-btn:active {
+  transform: scale(0.98);
+}
+
+.lets-btn span {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 968px) {
+  .Lets-button {
+    justify-self: center;
+    margin-top: 1.5rem;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .Letstalk-container {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .talk-title h4 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .talk-title p {
+    color: #000;
+    font-size: 0.9rem;
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .Lets-button {
+    justify-self: center;
+    margin-top: 1rem;
+    left: 0;
+    top: 0;
+  }
+
+  .lets-btn {
+    width: 90vw;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Letstalk-container {
+    margin-top: 25%;
+  }
+  .talk-title h4 {
+    font-size: 1.4rem;
+  }
+
+  .talk-title p {
+    color: black;
+    font-size: 0.8rem;
+    padding-left: 0;
+  }
+
+  .lets-btn {
+    font-size: 1rem;
+    height: 48px;
+    width: 80vw;
+    max-width: 280px;
+  }
+}

@@ -1,0 +1,21 @@
+.const{
+    padding-top: 100px;
+}
+
+@media (max-width: 1024px) {
+    .const{
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .const{
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .const{
+        padding-top: 150px;
+    }
+}
